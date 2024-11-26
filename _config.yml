@@ -23,8 +23,8 @@ email: info@wiresuncrossed.co.nz
 description: >- # this means to ignore newlines until "baseurl:"
   Hierarchy of Engineering Needs © 2024 by
   Wires Uncrossed is licensed under
-  CC BY-NC-SA 4.0 
-baseurl: "/" # the subpath of your site, e.g. /blog
+  CC BY-NC-SA 4.0
+baseurl: "" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll

@@ -1,0 +1,10 @@
+/* Global CSS rules */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: #333;
+}
+
+h1 {
+  font-size: 14pt;
+}

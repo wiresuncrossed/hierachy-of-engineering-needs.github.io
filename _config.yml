@@ -21,15 +21,18 @@
 title: Hierarchy of Engineering Needs
 email: info@wiresuncrossed.co.nz
 description: >- # this means to ignore newlines until "baseurl:"
-  This is Wires Uncrossed Hierarchy of Engineering Needs
-  v7 revision
-# baseurl: "" # the subpath of your site, e.g. /blog
+  Hierarchy of Engineering Needs © 2024 by
+  Wires Uncrossed is licensed under
+  CC BY-NC-SA 4.0 
+baseurl: "/" # the subpath of your site, e.g. /blog
 # url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 # github_username:  jekyll
 
 # Build settings
 theme: minima #jekyll-theme-leap-day
+minima:
+  skin: dark
 #plugins:
 #  - jekyll-feed
 

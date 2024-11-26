@@ -5,4 +5,6 @@
 layout: home
 ---
 
+![Hierarchy of Engineeering Needs - Table](/assets/hoen_table.svg)
+
 #HoEN

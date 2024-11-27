@@ -2,6 +2,7 @@
 layout: page
 title: Effective Ownership
 permalink: /effective_ownership/
+color: "#2282b1"
 ---
 
 What does the team need to effectively own and operate services already in production, regardless of new development work on those services? 

@@ -3,6 +3,7 @@ body {
   background-color: #3b3a39;
   color: #c3c3c3;
 }
+
 .site-nav .page-link {
   color: #c3c3c3;
   font-weight: bold;
@@ -12,6 +13,10 @@ body {
 .page-content .wrapper {
   border-left-width: 36px;
   border-left-style: solid;
+}
+
+.home .wrapper {
+  border: none;
 }
 
 h1,h2,h3 { margin-bottom: 0px;}
@@ -32,36 +37,3 @@ h1,h2,h3 { margin-bottom: 0px;}
 .post-content h2 { font-size: 14pt; }
 .post-content h3 { font-size: 12pt; }
 .post-content p, div { font-size: 10pt;}
-
-/* HOME VIEW */
-body.home {
-  background-color: white;
-  color: #333;
-}
-.home .site-nav .page-link {
-  color: #333;
-}
-.home .wrapper {
-  border: none;
-}
-
-/* COLOR */
-.basic_needs .site-title, .basic_needs .site-title:visited { color: #b4b4b4; }
-.basic_needs .post-title { color: #b4b4b4; }
-.basic_needs .wrapper { border-color: #b4b4b4; }
-
-.managed_work .site-title, .managed_work .site-title:visited { color: #caafdd; }
-.managed_work .post-title { color: #caafdd; }
-.managed_work .wrapper { border-color: #caafdd; }
-
-.effective_ownership .site-title, .effective_ownership .site-title:visited { color: #2282b1; }
-.effective_ownership .post-title { color: #2282b1 }
-.effective_ownership .wrapper { border-color: #2282b1; }
-
-.flow .site-title, .sustaniability .site-title:visited { color: #5ebbd8; }
-.sustaniability .post-title { color: #5ebbd8 }
-.sustaniability .wrapper { border-color: #5ebbd8}
-
-.flow .site-title, flow .site-title:visited { color: #ee7c01; }
-.flow .post-title { color: #ee7c01; }
-.flow .wrapper { border-color: #ee7c01; }

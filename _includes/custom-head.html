@@ -1,2 +1,14 @@
 <link rel="stylesheet" href="{{ "/assets/custom.css" | relative_url }}">
 <link rel="icon" href="{{ "/assets/hoen_icon.svg" | relative_url }}">
+
+<style>
+    {%- if page.theme == 'light' -%}
+    body, .site-nav .page-link {
+        background-color: white;
+        color: #333;
+    }
+    {%- endif -%}
+    .site-title, .site-title:visited { color: {{ page.color }}; }
+    .post-title { color:  {{ page.color }}; }
+    .wrapper { border-color:  {{ page.color }}; }
+</style>

@@ -2,6 +2,7 @@
 layout: page
 title: Sustainability
 permalink: /sustaniability/
+color: "#5ebbd8"
 ---
 
 What does the team need to grow and mature on a yearly level?

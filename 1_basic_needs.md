@@ -2,6 +2,7 @@
 layout: page
 title: Basic Needs
 permalink: /basic_needs/
+color: "#b4b4b4"
 ---
 
 What does any team, regardless of age and stage, need to build an application and deploy changes to it?

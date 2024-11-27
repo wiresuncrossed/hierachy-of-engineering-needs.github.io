@@ -2,6 +2,7 @@
 layout: page
 title: Managed Work
 permalink: /managed_work/
+color: "#caafdd"
 ---
 
 What does the team need to make work repeatable and have controls to verify the quality and efficiency of new work? 

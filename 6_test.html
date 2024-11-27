@@ -1,0 +1,127 @@
+---
+layout: base
+title: Test
+permalink: /test/
+color: red
+theme: light
+---
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    svg {
+      width: 100%;
+      height: 100vh;
+      border: 1px solid #ccc;
+    }
+    .node circle {
+      fill: #1f77b4;
+      stroke: white;
+      stroke-width: 2px;
+    }
+    .link {
+      stroke: #999;
+      stroke-opacity: 0.6;
+    }
+    text {
+      font-size: 12px;
+      pointer-events: none;
+    }
+  </style>
+
+<h1>D3.js Network Graph with Force Simulation</h1>
+
+<svg id="network-graph"></svg>
+
+<script>
+  // Example JSON input for the network graph (nodes and links)
+  const graphData = {
+    nodes: [
+      { id: 1, name: 'Node 1' },
+      { id: 2, name: 'Node 2' },
+      { id: 3, name: 'Node 3' },
+      { id: 4, name: 'Node 4' }
+    ],
+    links: [
+      { source: 1, target: 2 },
+      { source: 1, target: 3 },
+      { source: 2, target: 4 },
+      { source: 3, target: 4 }
+    ]
+  };
+
+  // Set up the SVG canvas dimensions
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  const svg = d3.select("#network-graph")
+    .attr("width", width)
+    .attr("height", height);
+
+  // Set up the simulation with forces (for layout)
+  const simulation = d3.forceSimulation(graphData.nodes)
+    .force("link", d3.forceLink(graphData.links).id(d => d.id).distance(150))  // Link force
+    .force("charge", d3.forceManyBody().strength(-200)) // Node repulsion force
+    .force("center", d3.forceCenter(width / 2, height / 2)) // Centering force
+    .on("tick", ticked);  // Called every simulation step to update positions
+
+  // Create links (edges between nodes)
+  const link = svg.append("g")
+    .selectAll(".link")
+    .data(graphData.links)
+    .enter().append("line")
+    .attr("class", "link")
+    .attr("stroke-width", 2);
+
+  // Create nodes (circles representing the nodes)
+  const node = svg.append("g")
+    .selectAll(".node")
+    .data(graphData.nodes)
+    .enter().append("g")
+    .attr("class", "node")
+    .call(d3.drag()  // Enable dragging behavior
+      .on("start", dragStart)
+      .on("drag", dragged)
+      .on("end", dragEnd));
+
+  node.append("circle")
+    .attr("r", 20);
+
+  node.append("text")
+    .attr("dx", 0)
+    .attr("dy", 5)
+    .attr("text-anchor", "middle")
+    .text(d => d.name);
+
+  // Function that is called on every tick of the simulation
+  function ticked() {
+    // Update link positions
+    link
+      .attr("x1", d => d.source.x)
+      .attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x)
+      .attr("y2", d => d.target.y);
+
+    // Update node positions
+    node
+      .attr("transform", d => `translate(${d.x}, ${d.y})`);
+  }
+
+  // Dragging behavior
+  function dragStart(event, d) {
+    if (!event.active) simulation.alphaTarget(0.3).restart();  // Activate the simulation on drag
+    d.fx = d.x;
+    d.fy = d.y;
+  }
+
+  function dragged(event, d) {
+    d.fx = event.x;
+    d.fy = event.y;
+  }
+
+  function dragEnd(event, d) {
+    if (!event.active) simulation.alphaTarget(0);  // Deactivate the simulation when dragging ends
+    d.fx = null;
+    d.fy = null;
+  }
+
+</script>

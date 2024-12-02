@@ -2,7 +2,7 @@
 
 
 
-Thank you for considering contributing to the **Hierarchy of Engineering Needs** project! Your involvement is crucial to its success. To ensure a smooth collaboration, please adhere to the following guidelines:
+Thank you for considering contributing to the **Hierarchy of Engineering Needs** project! The Hierachy of Needs project is supported and maintained by [Wires Uncrossed Engineering](https://www.wiresuncrossed.co.nz/about). Your involvement is crucial to its success. To ensure a smooth collaboration, please adhere to the following guidelines:
 
 ---
 

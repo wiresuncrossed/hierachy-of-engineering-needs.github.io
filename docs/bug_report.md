@@ -1,3 +1,10 @@
+---
+title: Bug Report
+layout: default
+exclude: true
+---
+
+
 
 ## Bug Report
 

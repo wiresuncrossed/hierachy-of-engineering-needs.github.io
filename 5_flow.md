@@ -30,16 +30,3 @@ My product embraces a hypothesis-driven approach, where experiments and data ana
 ## Chaos / Game Days
 My product team regularly conducts chaos/game days to proactively test and validate the system's resilience and readiness for unexpected scenarios. During chaos/game days, the team simulates real-world failure scenarios, such as service outages or network disruptions, to identify vulnerabilities, assess the system's response, and fine-tune incident response processes. By regularly subjecting the product to controlled chaos, the team can strengthen the system's robustness, improve incident response capabilities, and enhance overall system reliability.
 
-# CSV Data as Div Elements
-
-{% assign csv_data = site.data.definitions4 %}
-
-<div class="csv-entries">
-  {% for row in csv_data %}
-    <div class="csv-entry">
-      {% for cell in row %}
-        <p><strong>Data:</strong> {{ cell }}</p>
-      {% endfor %}
-    </div>
-  {% endfor %}
-</div>

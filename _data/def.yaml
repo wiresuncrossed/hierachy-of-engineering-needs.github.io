@@ -1,0 +1,4 @@
+- need_name: example
+  definition: "An example definition."
+- need_name: test
+  definition: "A test definition."

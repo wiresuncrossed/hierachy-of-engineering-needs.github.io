@@ -32,7 +32,7 @@ My product team regularly conducts chaos/game days to proactively test and valid
 
 # CSV Data as Div Elements
 
-{% assign csv_data = site.data.definitions %}
+{% assign csv_data = site.data.definitions4 %}
 
 <div class="csv-entries">
   {% for row in csv_data %}

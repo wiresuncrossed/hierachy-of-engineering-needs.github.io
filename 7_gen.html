@@ -8,17 +8,6 @@ exclude: true
 ---
 
 # CSV Data as Div Elements
-
-{% assign csv_data = site.data.definitions %}
-
-<div class="csv-entries">
-  {% for row in csv_data %}
-    <div class="csv-entry">
-      <p><strong>Need Name:</strong> {{ row }}</p>
-    </div>
-  {% endfor %}
-</div>
-
-{% for item in site.data.def %}
+{% for item in site.data.definitions %}
   <p>Need Yaml:{{ item.need_name }}: {{ item.definition }}</p>
 {% endfor %}

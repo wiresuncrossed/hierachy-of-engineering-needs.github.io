@@ -203,20 +203,25 @@ exclude: true
       {% assign node_ids = "" %}
       
       {% for link in site.data.links %}
-        {% unless node_ids contains link.source %}
-          { id: '{{ link.source | downcase | replace: " ", "" | replace: "&", "" }}', name: '{{ link.source }}' },
-          {% assign node_ids = node_ids | append: link.source %}
+        {% assign source = link.source | downcase | replace: " ", "" %}
+        {% assign target = link.target | downcase | replace: " ", "" %}
+
+        {% unless node_ids contains source %}
+          { id: '{{ source }}', name: '{{ link.source }}' },
+          {% assign node_ids = node_ids | append: source %}
         {% endunless %}
         
-        {% unless node_ids contains link.target %}
-          { id: '{{ link.target | downcase | replace: " ", "" | replace: "&", "" }}', name: '{{ link.target }}' },
-          {% assign node_ids = node_ids | append: link.target %}
+        {% unless node_ids contains target %}
+          { id: '{{ target }}', name: '{{ link.target }}' },
+          {% assign node_ids = node_ids | append: target %}
         {% endunless %}
       {% endfor %}
     ],
     links = [
       {% for link in site.data.links %}
-            { source: '{{ link.source | downcase | replace: " ", "" | replace: "&", "" }}', target: '{{ link.target | downcase | replace: " ", "" | replace: "&", "" }}' },
+          {% assign source = link.source | downcase | replace: " ", "" %}
+          {% assign target = link.target | downcase | replace: " ", "" %}
+          { source: '{{ link.source }}', target: '{{ target }}' },
       {% endfor %}
     ]
   };

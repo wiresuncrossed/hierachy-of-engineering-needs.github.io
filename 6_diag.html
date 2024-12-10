@@ -217,11 +217,11 @@ exclude: true
         {% endunless %}
       {% endfor %}
     ],
-    links = [
-      {% for link in site.data.links %}
-          {% assign source = link.source | downcase | replace: " ", "" %}
-          {% assign target = link.target | downcase | replace: " ", "" %}
-          { source: '{{ link.source }}', target: '{{ target }}' },
+    links: [
+      {% for l in site.data.links %}
+          {% assign source = l.source | downcase | replace: " ", "" %}
+          {% assign target = l.target | downcase | replace: " ", "" %}
+          { source: '{{ source }}', target: '{{ target }}' },
       {% endfor %}
     ]
   };

@@ -6,7 +6,7 @@ color: "#ee7c01"
 ---
 
 <div>
-  {% for item in site.data.def.hierarchy %}
+  {% for item in site.data.definitions.hierarchy %}
     {% if item.name == "Flow" %}
     <p>{{ item.description }}</p>
       {% for need in item.needs %}

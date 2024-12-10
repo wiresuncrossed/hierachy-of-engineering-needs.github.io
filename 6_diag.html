@@ -79,17 +79,18 @@ exclude: true
 -->
 
 
-<script>
+<!-- <script>
   // URL of the CSV file to be downloaded
   const csvUrl = '../assets/links.csv';  // Replace with the actual URL of your CSV file
-  
+  let graphData = {};
+
   // When the page loads, fetch and process the CSV data
   window.onload = function() {
       fetch(csvUrl)
           .then(response => response.text()) // Fetch the file as text
           .then(csvContent => {
               const data = parseCSV(csvContent); // Manually parse the CSV content
-              const graphData = convertCSVToGraphData(data);
+              graphData = convertCSVToGraphData(data);
               console.log(graphData);  // Log the generated graph data to the console
           })
           .catch(error => {
@@ -152,7 +153,7 @@ exclude: true
 
       return { nodes: nodes, links: links };
   }
-</script>
+</script> -->
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
   <style>
@@ -182,18 +183,41 @@ exclude: true
 
 <script>
   // Example JSON input for the network graph (nodes and links)
+  // const graphData = {
+  //   nodes: [
+  //     { id: 'aa', name: 'Node 1' },
+  //     { id: 'bb', name: 'Node 2' },
+  //     { id: 'cc', name: 'Node 3' },
+  //     { id: 'dd', name: 'Node 4' }
+  //   ],
+  //   links: [
+  //     { source: 'aa', target: 'bb' },
+  //     { source: 'aa', target: 'bb' },
+  //     { source: 'bb', target: 'dd' },
+  //     { source: 'cc', target: 'dd' }
+  //   ]
+  // };
+
   const graphData = {
     nodes: [
-      { id: 1, name: 'Node 1' },
-      { id: 2, name: 'Node 2' },
-      { id: 3, name: 'Node 3' },
-      { id: 4, name: 'Node 4' }
+      {% assign node_ids = "" %}
+      
+      {% for link in site.data.links %}
+        {% unless node_ids contains link.source %}
+          { id: '{{ link.source | downcase | replace: " ", "" | replace: "&", "" }}', name: '{{ link.source }}' },
+          {% assign node_ids = node_ids | append: link.source %}
+        {% endunless %}
+        
+        {% unless node_ids contains link.target %}
+          { id: '{{ link.target | downcase | replace: " ", "" | replace: "&", "" }}', name: '{{ link.target }}' },
+          {% assign node_ids = node_ids | append: link.target %}
+        {% endunless %}
+      {% endfor %}
     ],
-    links: [
-      { source: 1, target: 2 },
-      { source: 1, target: 3 },
-      { source: 2, target: 4 },
-      { source: 3, target: 4 }
+    links = [
+      {% for link in site.data.links %}
+            { source: '{{ link.source | downcase | replace: " ", "" | replace: "&", "" }}', target: '{{ link.target | downcase | replace: " ", "" | replace: "&", "" }}' },
+      {% endfor %}
     ]
   };
 

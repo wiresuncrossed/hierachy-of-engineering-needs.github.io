@@ -46,3 +46,14 @@ Infrastructure configurations are defined in code, enabling version control, rep
 
 ## Delivery Metrics
 Key metrics, such as lead time, cycle time, and throughput, are regularly monitored and reviewed. These metrics provide insights into delivery efficiency, predictability, and capacity to deliver value. The team can identify bottlenecks by analysing delivery metrics, optimising processes, and continuously making data-driven decisions to improve delivery performance.
+<div>
+  {% for item in site.data.definitions.hierarchy %}
+    {% if item.name == "Managed Work" %}
+    <p>{{ item.description }}</p>
+      {% for need in item.needs %}
+        <h2>{{ need.NeedName }}</h2>
+        <p>{{ need.Definition }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>

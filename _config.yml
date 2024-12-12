@@ -1,31 +1,11 @@
-# Site settings
 title: Hierarchy of Engineering Needs
 email: info@wiresuncrossed.co.nz
-description: >- # this means to ignore newlines until "baseurl:"
+description: >-
   Hierarchy of Engineering Needs © 2022, updated 2024 by
   <a href="https://wue.co.nz/model">Wires Uncrossed</a> is licensed under
   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-# baseurl: "" # the subpath of your site, e.g. /blog
-# url: "" # the base hostname & protocol for your site, e.g. http://example.com
-# twitter_username: jekyllrb
-# github_username:  jekyll
+# baseurl: "" # the subpath of your site, e.g. /hoen
+# url: "" # the base hostname & protocol for your site, e.g. https:/wiresuncrossed.co.nz
 
 # Build settings
 theme: minima
-# plugins:
-#  - jekyll-csv
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock

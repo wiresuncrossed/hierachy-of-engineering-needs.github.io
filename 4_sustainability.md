@@ -25,3 +25,15 @@ Team actively promotes a culture of experimentation to support both hypothesis-d
 
 ## Career Growth
 My product team provides ample opportunities for career growth and professional development. There is a mix of junior and senior talent on the team. Everyday pairing and coaching on specialised areas avoid key person dependencies. The team and company encourage continuous learning, supports skill enhancement, and provides access to training resources and mentorship programs. Regular performance evaluations and constructive feedback help identify areas for improvement and define career paths.
+
+<div>
+  {% for item in site.data.definitions.hierarchy %}
+    {% if item.name == "Sustainability" %}
+    <p>{{ item.description }}</p>
+      {% for need in item.needs %}
+        <h2>{{ need.NeedName }}</h2>
+        <p>{{ need.Definition }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>

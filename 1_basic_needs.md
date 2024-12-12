@@ -5,10 +5,22 @@ permalink: /basic_needs/
 color: "#b4b4b4"
 ---
 
-What does any team, regardless of age and stage, need to build an application and deploy changes to it?
+<div>
+  {% for item in site.data.definitions.hierarchy %}
+    {% if item.name == "Basic Needs" %}
+    <p>{{ item.description }}</p>
+      {% for need in item.needs %}
+        <h2>{{ need.NeedName }}</h2>
+        <p>
+            {{ need.Definition }}<br /><br />
+            {{ need.Value }}<br /><br />
+            {{ need.Indicators }}<br /><br />
+        </p>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>
 
-From People and purpose to Computing and a Backlog, all software projects need fundamental things in place for the team to succeed. 
-The more the group meets these needs in a self-service experience, the more successful the outcome.
 
 ## People & Purpose
 Enough team members to meet the ownership and delivery expectations on them.
@@ -87,3 +99,4 @@ Accounts created with consistent virtual networks for deployed assets and across
 The api gateways and web delivery mechanisms (e.g. CDNs) employed in my project ensure efficient and reliable communication between various services for internal and external traffic.
 These gateways provide a unified entry point, handle routing and load balancing, and ensure secure and optimised data transmission. With robust web delivery mechanisms, the project team can achieve high availability, scalability, and fault tolerance, delivering a seamless user experience and enabling effective integration with external systems.
 Examples: API GW, Azure API Management, Cloudflare, Fastly, Akamai, Cloudfront, Kong, NGINX.
+

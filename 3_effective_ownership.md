@@ -41,3 +41,14 @@ The ability to script user generation or resets to help with integration test au
 ## Static Analysis
 The team integrates static analysis tools that effectively identify code issues, potential vulnerabilities, and maintain code quality standards. These tools automatically analyse code, check for common programming errors, and enforce coding conventions. Tools run locally and as part of automated builds to detect and resolve new issues as early as possible. Data on software composition & supply chain is available centrally to manage licensing and security vulnerability risk.
 
+<div>
+  {% for item in site.data.definitions.hierarchy %}
+    {% if item.name == "Effective Ownership" %}
+    <p>{{ item.description }}</p>
+      {% for need in item.needs %}
+        <h2>{{ need.NeedName }}</h2>
+        <p>{{ need.Definition }}</p>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>

@@ -1,9 +1,14 @@
 hierarchy:
 - name: Basic Needs
-  description: Ability to build and application and deploy changes to it
+  description: >-
+    What does any team, regardless of age and stage, need to build an application and deploy changes to it?<br /><br />
+    From People and purpose to Computing and a Backlog, all software projects need fundamental things in place for the team to succeed.<br /><br /> 
+    The more the group meets these needs in a self-service experience, the more successful the outcome.<br /><br />
+
   needs:
   - NeedName: People & Purpose
-    Definition: Enough team members to meet the ownership and delivery expectations on them.
+    Definition: >-
+      Enough team members to meet the ownership and delivery expectations on them.
     Value: The project's vision and objectives are clearly communicated, creating a sense of shared purpose, motivation and cohesion among team members and leadership
     Indicators: I feel connected to the purpose and goals of the project I am working on.
 

@@ -15,3 +15,5 @@ The Hierarchy of Engineering Needs model combines Maslow's hierarchy of needs th
 
 
 ![Hierarchy of Engineeering Needs - Intensity and Performance over time](./assets/hoen_intensity-performance.svg)
+
+<div class="flourish-embed flourish-network" data-src="visualisation/20793549"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/20793549/thumbnail" width="100%" alt="network visualization" /></noscript></div>

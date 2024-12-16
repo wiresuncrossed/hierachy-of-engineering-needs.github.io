@@ -67,6 +67,26 @@ hierarchy:
     Value: Self-service compute solutions available for the teams across VMs, containers, FaaS and edge workloads with opinionated sensible defaults. Clear options to support minimum capacity, elastic scaling, burst scaling and serverless. Guidance and defaults in place for performance, reliability and availability of compute platforms.
     Indicators: Compute fleets are kept young and disposable through routine fleet management. Running instances, configured containers younger than two weeks to improve patching compliance and avoid stateful dependency. Proactive management of minimum OS and runtime versions to avoid running non supported versions or dependencies in production.
 
+- name: Managed Work
+  description: >-
+  What does the team need to make work repeatable and have controls to verify the quality and efficiency of new work? 
+  The team has begun to agree on standard technical practices. 
+  Documentation and information on components and their operational routines are accurate and familiar. 
+  Deployment solutions automate the orchestration of quality and compliance checks. The team can invest in controls and tooling for the early warning of failures and abnormalities.
+  Delivery and flow efficiency metrics highlight opportunities for relative improvement within the group. 
+needs:
+  - NeedName: Information Management
+    Definition: >- 
+    The team maintains a consistent repository of information on component ownership, support routines, team composition and solution architecture. 
+    The information is accessible across the organisation to support efficient onboarding, communication and incident management across teams. 
+    All deployed infrastructure is identifiable to the component and associated team level.
+- NeedName: Standards Compliance
+    Definition: >- 
+    The combined organisation obligations (e.g. audit, regulations) and agreed best practices are documented, transparent and respected by teams. 
+    There is a process to propose and accept changes to established standards. 
+    The level of compliance with standards is visible across the organisation.
+
+
 - name: Flow
   description: >
     What does the team need for a thriving innovation culture while enjoying high throughput and Industry leading quality of service?<br /><br />

@@ -9,3 +9,4 @@ description: >-
 
 # Build settings
 theme: minima
+google_analytics: <%= ENV['GA_TRACKING_ID'] || 'G-694T6WXM8W' %>

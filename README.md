@@ -15,6 +15,60 @@ This work is licensed under a
 
 ## Installation Guide
 
+
+# Jekyll Installation Instructions
+
+## macOS Installation
+
+1. **Install Ruby**:
+   ```bash
+   brew install ruby
+   echo 'export PATH="$(brew --prefix ruby)/bin:$PATH"' >> ~/.zshrc
+   source ~/.zshrc
+   ```
+
+2. **Install Bundler**:
+   ```bash
+   gem install bundler
+   ```
+
+3. **Install Dependencies**:
+   Navigate to the repository directory and install dependencies:
+   ```bash
+   bundle install
+   ```
+
+4. **Run the Server**:
+   ```bash
+   bundle exec jekyll serve
+   ```
+   Open your browser at `http://localhost:4000`.
+
+## Windows Installation
+
+1. **Install Ruby**:
+    - Download and install Ruby from [Ruby Installer](https://rubyinstaller.org/).
+    - During installation, select the option to install the MSYS2 toolchain.
+
+2. **Install Bundler**:
+   Open a new Command Prompt or PowerShell and run:
+   ```bash
+   gem install bundler
+   ```
+
+3. **Install Dependencies**:
+   Navigate to the repository directory and install dependencies:
+   ```bash
+   bundle install
+   ```
+
+4. **Run the Server**:
+   ```bash
+   bundle exec jekyll serve
+   ```
+   Open your browser at `http://localhost:4000`.
+
+
 ### Pre-requisites
 
 Ruby https://www.ruby-lang.org/en/documentation/installation/

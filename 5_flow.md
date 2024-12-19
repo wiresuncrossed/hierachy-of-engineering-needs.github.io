@@ -11,7 +11,11 @@ color: "#ee7c01"
     <p>{{ item.description }}</p>
       {% for need in item.needs %}
         <h2>{{ need.NeedName }}</h2>
-        <p>{{ need.Definition }}</p>
+        <p>
+            {{ need.Definition }}<br />
+            {{ need.Value }}<br />
+            {{ need.Indicators }}
+        </p>
       {% endfor %}
     {% endif %}
   {% endfor %}

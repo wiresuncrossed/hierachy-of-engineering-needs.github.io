@@ -14,6 +14,18 @@ This work is licensed under a
 [cc-by-nc-sa-shield]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg
 
 ## Installation Guide
+The repository relies on submodules
+too fetch definition files into the
+jekyll `_data` directory from:
+- https://github.com/wiresuncrossed/hoen-definitions
+
+If you need to force submodule refresh, execute the
+following commands:
+
+```bash
+git submodule init
+git submodule update
+```
 
 
 # Jekyll Installation Instructions

@@ -1,70 +1,104 @@
-# Contributing to the Hierachy of Engineering Needs
+# Contributions Guidelines
+
+## Getting Started
+
+### Fork and Clone
+1. **Fork the Repository**: Create a copy of the repository under your GitHub account.
+2. **Clone the Fork**: Clone your fork locally to begin making changes.
+
+### Create a New Branch
+- Use a descriptive name for your branch, such as:
+  ```bash
+  git checkout -b definitions.yaml-<your-change>
+  ```
+
+## Making Changes
+
+### File Scope
+- **Edit only** `path/to/definitions.yaml`.
+
+### Allowed Changes
+- Add new definitions.
+- Update existing definitions to improve spelling, grammar, or clarity.
+- Fix YAML syntax or formatting issues.
+
+### Prohibited Changes
+- Edits to any files outside of `definitions.yaml`.
+- Restructuring the YAML schema or introducing new formats.
+- Duplicating existing definitions.
+
+### Content Guidelines
+#### Clarity and Consistency
+- **Name**: Use Title Case (e.g., "Code Review Process").
+- **Description**: Write clearly and concisely in 2–3 sentences, adhering to proper grammar, spelling, and punctuation.
+
+#### Vendor/Technology-Agnostic
+- Contributions must remain agnostic to specific vendors or technologies.
+
+### Format and Validity
+- Validate the YAML file using tools like `yamllint` or `prettier`.
+- Indent with **2 spaces** (or adjust per preference).
+- Ensure valid syntax and consistent key-value naming.
+
+### Specificity of Changes
+- Clearly describe what was changed and why.
+- Avoid unrelated edits; focus only on the specific issue.
+
+## Submitting a Pull Request (PR)
+
+### PR Requirements
+1. **Title**: Provide a short, descriptive title.
+2. **Description**: Include a detailed explanation of the change.
+3. **Link Related Issues**: Reference any relevant issues, if applicable.
+
+### Testing
+- Test and validate your changes locally to ensure correctness.
+
+### Versioning
+- Use the `MAJOR.MINOR.PATCH` format for releases:
+    - **MAJOR**: Structural changes, reorganisations, or significant updates.
+    - **MINOR**: Substantial content updates, such as adding or rewording needs.
+    - **PATCH**: Typos, grammar, or formatting fixes.
+- Releases occur upon PR acceptance and merge.
+
+## Review Process
+
+### Maintainer Review
+A maintainer will review your PR for:
+- Valid syntax and structure.
+- Adherence to guidelines.
+- Clarity and relevance of content.
+
+#### Feedback
+- Feedback may be provided for minor improvements.
+- PRs failing to meet criteria will be closed with feedback for revision within **14 days**.
+
+### Reasons for Rejection
+- **Scope Violations**: Changes outside the allowed scope, such as editing files other than `definitions.yaml`.
+- **YAML Syntax or Formatting Errors**: Issues with file structure, indentation, or invalid YAML syntax.
+- **Missing Fields/Duplicates**: Omission of required fields or duplication of existing definitions.
+- **File Integrity Issues**: Corruption or inconsistencies in the file caused by edits.
+- **Non-Unique Identifiers**: Duplicate or conflicting identifiers for definitions.
+- **Lack of Explanation**: Insufficient details about the changes made and their purpose.
+- **No Tests**: Failure to validate or test changes before submission.
+
+## Language Tone and Style
+
+### General Tone
+- **Clear and Concise**: Use straightforward, precise language.
+- **Professional Yet Approachable**: Maintain a formal tone while being friendly and relatable.
+- **Empowering**: Use language that instills confidence.
+- **Inclusive**: Ensure language is welcoming and respectful.
+
+### Style Principles
+- **Focus on the Reader**: Write with the target audience in mind, prioritising actionable insights.
+- **Active Voice**: Use active phrasing for clarity and engagement.
+    - Example: “Team members complete tasks” instead of “Tasks are completed by team members.”
+- **Action-Oriented**: Encourage responsibility with active verbs.
+    - Example: “You can” instead of “It is possible to.”
+- **Positive Framing**: Highlight opportunities over challenges.
+    - Example: “Environments can be set up efficiently” instead of “Environments are hard to set up.”
+- **Consistency**: Maintain uniform terminology and formatting across all documentation.
+- **Agnostic**: Avoid references to specific tools, vendors, or technologies.
 
 
-
-Thank you for considering contributing to the **Hierarchy of Engineering Needs** project! The Hierachy of Needs project is supported and maintained by [Wires Uncrossed Engineering](https://www.wiresuncrossed.co.nz/about). Your involvement is crucial to its success. To ensure a smooth collaboration, please adhere to the following guidelines:
-
----
-
-## **How to Contribute**
-
-1. **Reporting Issues**
-   - **Search Existing Issues**: Before submitting a new issue, please check the [issue tracker](https://github.com/wiresuncrossed/hierachy-of-engineering-needs.github.io/issues) to see if it has already been reported.
-   - **Creating a New Issue**: If your issue is not listed, [open a new issue](https://github.com/wiresuncrossed/hierachy-of-engineering-needs.github.io/issues/new) and provide:
-     - A clear and descriptive title.
-     - Detailed information about the issue.
-     - Steps to reproduce the problem, if applicable.
-
-2. **Suggesting Enhancements**
-   - **Feature Requests**: To propose new features or enhancements, [open a feature request](https://github.com/wiresuncrossed/hierachy-of-engineering-needs.github.io/issues/new) detailing:
-     - The motivation behind the feature.
-     - How it benefits the project.
-     - Any potential drawbacks.
-
-3. **Submitting Needs or Definitions Changes**
-   - **Fork the Repository**: Click the "Fork" button at the top right corner of the repository page to create your own copy.
-   - **Clone Your Fork**: Use the following command to clone your forked repository:
-     ```bash
-     git clone https://github.com/your-username/hierachy-of-engineering-needs.github.io.git
-     ```
-   - **Create a Branch**: It's advisable to create a new branch for your changes:
-     ```bash
-     git checkout -b your-branch-name
-     ```
-   - **Make Changes**: Implement your changes, ensuring they align with the project's standards.
-   - **Commit Changes**: Write clear and concise commit messages.
-   - **Push to Your Fork**: Push your changes to your forked repository:
-     ```bash
-     git push origin your-branch-name
-     ```
-   - **Open a Pull Request**: Navigate to the original repository and [open a pull request](https://github.com/wiresuncrossed/hierachy-of-engineering-needs.github.io/compare) from your branch. Include:
-     - A descriptive title.
-     - A summary of changes.
-     - References to any related issues.
-
----
-
-## **Needs and Definition Standards**
-
-- **Consistency**: Ensure your need or defintion adheres to the existing style and conventions of the project.
-- **Documentation**: Update or add documentation as necessary to reflect your changes.
-
----
-
-## **Pull Request Process**
-
-1. **Review**: Maintainers from Wires Uncrossed will review your pull request and may request changes.
-2. **Feedback**: Be responsive to feedback and make necessary adjustments.
-3. **Approval**: Once approved, your pull request will be merged into the main branch.
-
----
-
-## **Community Guidelines**
-
-- **Respect**: Treat all community members with respect and professionalism.
-- **Collaboration**: Be open to constructive criticism and collaborative problem-solving.
-- **Inclusivity**: Ensure your contributions are inclusive and considerate of diverse perspectives.
-
----
-
-By following these guidelines, you help maintain the project's integrity and foster a positive collaborative environment. Thank you for your contributions!

@@ -80,7 +80,40 @@ git submodule update
    ```
    Open your browser at `http://localhost:4000`.
 
+## Windows WSL Installation
 
+1. **Install Ruby**:
+   ```bash
+   sudo apt update
+   sudo apt-get install ruby-full
+   ```
+2. **Install development packages**:
+   ```bash
+   sudo apt-get update
+   sudo apt-get install -y ruby-dev build-essential libssl-dev zlib1g-dev
+   ```
+3. **Add Gem installation path**:
+   ```bash
+   # Ruby and Gem Configuration
+   export GEM_HOME="$HOME/.gem"
+   export PATH="$HOME/.gem/bin:$PATH"
+   ```
+4. **Install bundler**:
+   ```bash   
+   gem install bundler
+   ```
+
+5. **Install Dependencies**:
+   Navigate to the repository directory and install dependencies:
+   ```bash
+   bundle install
+   ```
+
+6. **Run the Server**:
+   ```bash
+   bundle exec jekyll serve
+   ```
+   Open your browser at `http://localhost:4000`.
 ### Pre-requisites
 
 Ruby https://www.ruby-lang.org/en/documentation/installation/

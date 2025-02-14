@@ -6,15 +6,15 @@ color: "#caafdd"
 ---
 
 <div>
-  {% for item in site.data.definitions.hierarchy %}
-    {% if item.name == "Managed Work" %}
+  {% for item in site.data.definitions.hierarchy.levels %}
+    {% if item.level == 2 %}
     <p>{{ item.description }}</p>
       {% for need in item.needs %}
-        <h2>{{ need.NeedName }}</h2>
+        <h2 id="{{ need.ID }}">{{ need.Name }}</h2>
         <p>
             {{ need.Definition }}<br />
-            {{ need.Value }}<br />
-            {{ need.Indicators }}
+            {{ need.Purpose }}<br />
+            {{ need.maturitySignals }}
         </p>
       {% endfor %}
     {% endif %}

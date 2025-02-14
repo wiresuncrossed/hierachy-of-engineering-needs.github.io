@@ -35,7 +35,7 @@ jobs:
 
     - name: Validate CSS
       run: |
-        gem install css-lint
+        npm install -g csslint
         csslint ./_site/css
 
     - name: Validate Links

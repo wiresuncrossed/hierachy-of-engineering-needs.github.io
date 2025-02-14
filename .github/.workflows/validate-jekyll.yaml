@@ -1,0 +1,45 @@
+name: Validate Jekyll Site
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '2.7' # or the version you need
+
+    - name: Install dependencies
+      run: bundle install
+
+    - name: Build the site
+      run: bundle exec jekyll build
+
+    - name: Validate HTML
+      run: |
+        gem install html-proofer
+        bundle exec jekyll build
+        htmlproofer ./_site --disable-external
+
+    - name: Validate CSS
+      run: |
+        gem install css-lint
+        csslint ./_site/css
+
+    - name: Validate Links
+      run: |
+        gem install html-proofer
+        bundle exec jekyll build
+        htmlproofer ./_site --check-html --check-external-hash

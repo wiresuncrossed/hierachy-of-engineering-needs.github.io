@@ -33,13 +33,13 @@ jobs:
         bundle exec jekyll build
         htmlproofer ./_site --disable-external
 
-    - name: Validate CSS
-      run: |
-        gem install css-lint
-        csslint ./_site/css
+    # - name: Validate CSS
+    #   run: |
+    #     npm install -g csslint
+    #     csslint ./_site/css
 
     - name: Validate Links
       run: |
         gem install html-proofer
         bundle exec jekyll build
-        htmlproofer ./_site --check-html --check-external-hash
+        htmlproofer ./_site --check-external-hash

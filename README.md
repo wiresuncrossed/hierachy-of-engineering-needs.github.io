@@ -23,7 +23,7 @@ git checkout tags/v7.1.0
 cd ..
 ```
 
-d
+
 # Jekyll Installation Instructions
 
 ## macOS Installation

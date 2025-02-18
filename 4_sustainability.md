@@ -2,7 +2,8 @@
 layout: page
 title: Sustainability
 permalink: /sustaniability/
-color: "#5ebbd8"
+theme: light
+color: "#149286"
 ---
 
 <div>

@@ -2,7 +2,8 @@
 layout: page
 title: Managed Work
 permalink: /managed_work/
-color: "#caafdd"
+theme: light
+color: "#502470"
 ---
 
 <div>

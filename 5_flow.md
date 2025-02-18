@@ -2,6 +2,7 @@
 layout: page
 title: Flow
 permalink: /flow/
+theme: light
 color: "#ee7c01"
 ---
 

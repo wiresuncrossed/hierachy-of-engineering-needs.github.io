@@ -2,6 +2,7 @@
 layout: page
 title: Effective Ownership
 permalink: /effective_ownership/
+theme: light
 color: "#2282b1"
 ---
 

@@ -2,7 +2,8 @@
 layout: page
 title: Basic Needs
 permalink: /basic_needs/
-color: "#b4b4b4"
+theme: light
+color: "#333"
 ---
 
 <div>

@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 h1,h2,h3 { margin-bottom: 0px;}
 
 .post-title { 
-  font-size: 18pt; 
+  font-size: 22pt; 
   font-family: 'Montserrat', sans-serif;
 }
 .post-title::before {
@@ -48,10 +48,10 @@ h1,h2,h3 { margin-bottom: 0px;}
     margin-right: 10px;
     vertical-align: middle;
   }
-.post-content h1 { font-size: 16pt; }
-.post-content h2 { font-size: 14pt; }
-.post-content h3 { font-size: 12pt; }
-.post-content p, div { font-size: 10pt;}
+.post-content h1 { font-size: 16pt; font-weight: bold;}
+.post-content h2 { font-size: 14pt; font-weight: bold;}
+.post-content h3 { font-size: 12pt; font-weight: bold;}
+.post-content p, div { font-size: 11pt;}
 
 .page-content {
   font-family: 'Montserrat', sans-serif;
@@ -74,7 +74,7 @@ h1,h2,h3 { margin-bottom: 0px;}
 
 .page-content p,
 .page-content div {
-  font-size: 17px;
+  font-size: 11pt;
   line-height: 30.6px;
   letter-spacing: 1.36px;
 }

@@ -10,6 +10,7 @@ source "https://rubygems.org"
 gem "jekyll"#, "~> 4.3.4"
 gem "minima"#, "~> 2.5"
 gem "github-pages", group: :jekyll_plugins
+gem 'public_suffix', '~> 5.1.1'
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   #gem "jekyll-feed"#, "~> 0.12"

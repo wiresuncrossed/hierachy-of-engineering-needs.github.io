@@ -16,9 +16,14 @@ following commands:
 ```bash
 git submodule init
 git submodule update
+# Pin the submodule to tag 7.1:
+cd _data
+git fetch --tags
+git checkout tags/v7.1.0
+cd ..
 ```
 
-
+d
 # Jekyll Installation Instructions
 
 ## macOS Installation

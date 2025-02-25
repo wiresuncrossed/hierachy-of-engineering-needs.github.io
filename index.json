@@ -1,0 +1,28 @@
+---
+layout: text
+---
+[
+{% for item in site.data.definitions.hierarchy.levels %}
+    {% assign levelHref = item.level | map_item_level %}
+    {
+        "id": "level-{{ item.level }}",
+        "name": "{{ item.name }}",
+        "description": {{ item.description | jsonify }},
+        "href": "/{{ levelHref }}"
+    },
+    {% for need in item.needs %}
+    {
+        "id": {{ need.ID | jsonify }},
+        "name": {{ need.Name | jsonify }},
+        "descriptions": {{ need.Definition | jsonify }},
+        "href": "/{{ levelHref }}"
+    },
+    {% endfor %}
+{% endfor %}
+{
+    "id": "home",
+    "name": "Home",
+    "description": "Home page abut this project",
+    "href": "/"
+}
+]

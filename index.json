@@ -2,6 +2,7 @@
 layout: text
 ---
 [
+{% assign counter = 0 %}
 {% for item in site.data.definitions.hierarchy.levels %}
     {% assign levelHref = item.level |
         replace: '1', 'basic_needs/' |
@@ -10,15 +11,17 @@ layout: text
         replace: '4', 'sustainability/' |
         replace: '5', 'flow/'
     %}
+    {% assign counter = counter | plus: 1 %}
     {
-        "id": "level-{{ item.level }}",
+        "id": {{ counter }},
         "title": "{{ item.name }}",
         "body": {{ item.description | jsonify }},
         "url": "{{ site.url }}/{{ levelHref }}"
     },
     {% for need in item.needs %}
+    {% assign counter = counter | plus: 1 %}
     {
-        "id": {{ need.ID | jsonify }},
+        "id": {{ counter }},
         "title": {{ need.Name | jsonify }},
         "body": {{ need.Definition | jsonify }},
         "url": "{{ site.url }}/{{ levelHref }}#{{ need.ID }}"
@@ -26,7 +29,7 @@ layout: text
     {% endfor %}
 {% endfor %}
 {
-    "id": "home",
+    "id": 0,
     "title": "Home",
     "body": "Home page about this project",
     "url": "{{ site.url }}/"

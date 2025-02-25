@@ -6,23 +6,23 @@ layout: text
     {% assign levelHref = item.level | map_item_level %}
     {
         "id": "level-{{ item.level }}",
-        "name": "{{ item.name }}",
-        "description": {{ item.description | jsonify }},
-        "href": "/{{ levelHref }}"
+        "title": "{{ item.name }}",
+        "body": {{ item.description | jsonify }},
+        "url": "/{{ levelHref }}"
     },
     {% for need in item.needs %}
     {
         "id": {{ need.ID | jsonify }},
-        "name": {{ need.Name | jsonify }},
-        "descriptions": {{ need.Definition | jsonify }},
-        "href": "/{{ levelHref }}"
+        "title": {{ need.Name | jsonify }},
+        "body": {{ need.Definition | jsonify }},
+        "url": "/{{ levelHref }}"
     },
     {% endfor %}
 {% endfor %}
 {
     "id": "home",
-    "name": "Home",
-    "description": "Home page abut this project",
-    "href": "/"
+    "title": "Home",
+    "body": "Home page abut this project",
+    "url": "/"
 }
 ]

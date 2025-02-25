@@ -29,6 +29,6 @@ layout: text
     "id": "home",
     "title": "Home",
     "body": "Home page about this project",
-    "url": "{{ site.url }}"
+    "url": "{{ site.url }}/"
 }
 ]

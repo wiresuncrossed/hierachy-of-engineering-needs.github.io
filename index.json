@@ -3,26 +3,32 @@ layout: text
 ---
 [
 {% for item in site.data.definitions.hierarchy.levels %}
-    {% assign levelHref = item.level | map_item_level %}
+    {% assign levelHref = item.level |
+        replace: '1', 'basic_needs/' |
+        replace: '2', 'managed_work/' |
+        replace: '3', 'effective_ownership/' |
+        replace: '4', 'sustainability/' |
+        replace: '5', 'flow/'
+    %}
     {
         "id": "level-{{ item.level }}",
         "title": "{{ item.name }}",
         "body": {{ item.description | jsonify }},
-        "url": "/{{ levelHref }}"
+        "url": "{{ site.url }}/{{ levelHref }}"
     },
     {% for need in item.needs %}
     {
         "id": {{ need.ID | jsonify }},
         "title": {{ need.Name | jsonify }},
         "body": {{ need.Definition | jsonify }},
-        "url": "/{{ levelHref }}"
+        "url": "{{ site.url }}/{{ levelHref }}#{{ need.ID }}"
     },
     {% endfor %}
 {% endfor %}
 {
     "id": "home",
     "title": "Home",
-    "body": "Home page abut this project",
-    "url": "/"
+    "body": "Home page about this project",
+    "url": "{{ site.url }}"
 }
 ]

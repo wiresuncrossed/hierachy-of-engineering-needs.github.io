@@ -4,7 +4,6 @@
     {% assign counter = 0 %}
     var documents = [
         {% for item in site.data.definitions.hierarchy.levels %}
-        {% assign counter = counter | plus: 1 %}
             {% assign levelHref = item.level |
                 replace: '1', 'basic_needs/' |
                 replace: '2', 'managed_work/' |
@@ -15,26 +14,27 @@
             {
                 "id": {{ counter }},
                 "title": "{{ item.name }}",
-                "body": {{ item.description | jsonify }},
+                "body": {{ item.name | append: ' - ' | append: item.description | jsonify }},
                 "url": "{{ site.url }}/{{ levelHref }}"
             },
-            {% for need in item.needs %}
             {% assign counter = counter | plus: 1 %}
+            {% for need in item.needs %}
             {
                 "id": {{ counter }},
                 "title": {{ need.Name | jsonify }},
-                "body": {{ need.Definition | jsonify }},
+                "body": {{ need.Name | append: ' - ' | append: need.Definition | markdownify | replace: '.', '. ' | jsonify }},
                 "url": "{{ site.url }}/{{ levelHref }}#{{ need.ID }}"
             },
+            {% assign counter = counter | plus: 1 %}
             {% endfor %}
         {% endfor %}
-        {% assign counter = counter | plus: 1 %}
         {
             "id": {{ counter }},
             "title": "Home",
             "body": "Home page about this project",
             "url": "{{ site.url }}/"
         }
+        {% assign counter = counter | plus: 1 %}
     ];
     // var documents = [
     // [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{

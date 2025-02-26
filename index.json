@@ -11,25 +11,25 @@ layout: text
         replace: '4', 'sustainability/' |
         replace: '5', 'flow/'
     %}
-    {% assign counter = counter | plus: 1 %}
     {
         "id": {{ counter }},
         "title": "{{ item.name }}",
         "body": {{ item.description | jsonify }},
         "url": "{{ site.url }}/{{ levelHref }}"
     },
-    {% for need in item.needs %}
     {% assign counter = counter | plus: 1 %}
+    {% for need in item.needs %}
     {
         "id": {{ counter }},
         "title": {{ need.Name | jsonify }},
         "body": {{ need.Definition | jsonify }},
         "url": "{{ site.url }}/{{ levelHref }}#{{ need.ID }}"
     },
+    {% assign counter = counter | plus: 1 %}
     {% endfor %}
 {% endfor %}
 {
-    "id": 0,
+    "id": {{ counter }},
     "title": "Home",
     "body": "Home page about this project",
     "url": "{{ site.url }}/"

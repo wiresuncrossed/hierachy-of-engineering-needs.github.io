@@ -93,5 +93,26 @@ h1,h2,h3 { margin-bottom: 0px;}
     letter-spacing: normal;
     margin-top: 20px;      /* Add space above the title */
     padding-top: 10px;   
+}
 
+/* Footer styling - updated to target specific elements */
+.site-footer {
+  text-align: center;
+}
+
+.site-footer .footer-col-wrapper {
+  text-align: center;
+}
+
+.footer-logo {
+  max-width: 120px;
+  margin-top: 10px ;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.site-footer p {
+  text-align: center;
 }

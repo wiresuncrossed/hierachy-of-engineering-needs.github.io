@@ -1,9 +1,12 @@
 title: Hierarchy of Engineering Needs
 email: info@wiresuncrossed.co.nz
 description: >-
-  Hierarchy of Engineering Needs © 2022, updated 2024 by
+  <div style="text-align: center;">
+  Hierarchy of Engineering Needs © 2022, updated 2025 by <br>
   <a href="https://wue.co.nz/model">Wires Uncrossed</a> is licensed under
   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+  <br><br>Made with 🥝 passion by Wires Uncrossed in New Zealand and Europe
+  </div>
 # baseurl: "" # the subpath of your site, e.g. /hoen
 # url: "" # the base hostname & protocol for your site, e.g. https:/wiresuncrossed.co.nz
 

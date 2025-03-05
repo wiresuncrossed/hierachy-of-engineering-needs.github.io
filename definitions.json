@@ -1,0 +1,4 @@
+---
+layout: text
+---
+{{ site.data.definitions | jsonify }}

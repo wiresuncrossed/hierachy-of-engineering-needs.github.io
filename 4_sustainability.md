@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Sustainability
-permalink: /sustaniability/
+permalink: /sustainability/
 theme: light
 color: "#149286"
 ---

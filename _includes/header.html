@@ -18,7 +18,6 @@
         </label>
 
         <div class="trigger">
-          
           <a class="page-link" href="/">
             <i class="fa fa-home" aria-hidden="true"></i>
           </a>
@@ -33,7 +32,9 @@
         </div>
       </nav>
 
-    {% include search-lunr.html %}
+      <div class="search-container">
+        {% include search-lunr.html %}
+      </div>
     {%- endif -%}
   </div>
 </header>

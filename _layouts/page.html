@@ -4,7 +4,14 @@ layout: base
 <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <h1 class="post-title">
+      <span style="display: flex; justify-content: space-between; align-items: center;">
+        <span>{{ page.title | escape }}</span>
+        <a href="https://github.com/wiresuncrossed/hoen-definitions" target="_blank" rel="noopener noreferrer">
+          <img src="/assets/github-icon.svg" width="30" height="30" style="{% if page.color %}{% if page.color == '#333' %}filter: brightness(0.2);{% elsif page.color == '#502470' %}filter: hue-rotate(270deg) saturate(1.5);{% elsif page.color == '#2282b1' %}filter: hue-rotate(180deg) saturate(1.2);{% elsif page.color == '#149286' %}filter: hue-rotate(160deg) saturate(1.5);{% elsif page.color == '#ee7c01' %}filter: hue-rotate(30deg) saturate(2);{% endif %}{% endif %}" alt="GitHub Repository">
+        </a>
+      </span>
+    </h1>
   </header>
 
   <div class="post-content">

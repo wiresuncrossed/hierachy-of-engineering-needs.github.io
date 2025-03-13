@@ -1,0 +1,27 @@
+<div>
+  {% for item in site.data.definitions.hierarchy.levels %}
+    {% if item.level == include.level %}
+    <p>{{ item.description }}</p>
+      {% for need in item.needs %}
+        <h2 id="{{ need.ID }}">{{ need.Name }}</h2>
+        <div class="need-content">
+          <p>{{ need.Definition }}</p>
+          <div class="need-details">
+            <p><strong>💎 Benefit: </strong> {{ need.Purpose }}</p>
+            <p><strong>📶 Signal(s):</strong> {{ need.maturitySignals }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+</div>
+
+<style>
+  .need-content {
+    margin-bottom: 2em;
+  }
+  .need-details {
+    margin-left: 2em;
+    padding-left: 1em;
+  }
+</style> 

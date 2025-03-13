@@ -16,17 +16,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
-  display: inline-block;
-  font-size: 0.95em; /* Slightly reduce font size */
+}
+.site-nav .page-link:not(:last-child) {
+  margin-right: 35px;
 }
 
-.site-nav .page-link:not(:last-child) {
-  margin-right: 12px; /* Further reduced from 20px to make items closer together */
-}
 
 .site-nav {
-    float: left;
-    white-space: nowrap; /* Prevent wrapping to new line */
+    float: left;    
     max-width: 100%;
     overflow-x: visible;
 }
@@ -59,10 +56,6 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
 }
 
-/* Reduce spacing for "Effective Ownership" */
-a.page-link[href*="effective_ownership"] {
-    letter-spacing: -0.5px;
-}
 
 .page-content .wrapper {
   border-left-width: 36px;
@@ -75,24 +68,110 @@ a.page-link[href*="effective_ownership"] {
 
 h1,h2,h3 { margin-bottom: 0px;}
 
-.post-title { 
+/* 
+ * Post Header Styling - All styles related to post headers
+ * Ensures proper horizontal and vertical alignment
+ */
+
+/* Base post-header styling */
+header.post-header, 
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 60px;
+  padding: 10px 0;
+  position: relative; /* For absolute positioning of elements if needed */
+  width: 100%;
+}
+
+/* Ensure all direct children of post-header are vertically centered */
+header.post-header > *,
+.post-header > * {
+  display: flex;
+  align-items: center;
+  margin: auto 0;
+}
+
+/* Style for post titles with proper horizontal alignment */
+h1.post-title,
+.post-title {
   font-size: 22pt; 
   font-family: 'Montserrat', sans-serif;
   position: relative;
   padding-left: 46px; /* Make room for the icon */
+  display: flex;
+  align-items: center;
+  margin: 0;
+  line-height: 1.2;
+  width: 100%; /* Ensure it takes full width for proper alignment */
 }
 
+/* Icon styling for post titles - positioned first */
 .post-title::before {
   content: '';
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 36px; /* Set the width of the SVG */
-  height: 36px; /* Set the height of the SVG */
+  width: 36px;
+  height: 36px;
   background-image: url('/assets/hoen_icon.svg');
-  background-size: contain; /* Ensure the SVG scales properly */
+  background-size: contain;
   background-repeat: no-repeat;
+  margin: auto 0; /* Ensure vertical centering */
+  z-index: 1; /* Ensure it's above other elements */
+}
+
+/* Main container for title content - ensures proper spacing */
+.post-title > span,
+h1.post-title > span {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Space between title text and GitHub icon */
+  align-items: center;
+  height: 100%;
+}
+
+/* Style for the title text - positioned after icon */
+.post-title > span > span:first-child,
+h1.post-title > span > span:first-child {
+  flex-grow: 1; /* Allow it to grow and take available space */
+  text-align: left;
+  padding-right: 20px; /* Give some space between text and GitHub icon */
+}
+
+/* Style for the GitHub icon - right-aligned */
+.post-title > span > a,
+h1.post-title > span > a {
+  flex-shrink: 0; /* Prevent shrinking */
+  margin-left: auto; /* Push to the right */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Ensure content is right-aligned */
+}
+
+/* Ensure the GitHub icon is properly aligned */
+.post-title > span > a img,
+h1.post-title > span > a img {
+  margin: 0;
+  vertical-align: middle;
+  margin-left: auto; /* Ensure it stays right-aligned */
+}
+
+/* Style for post-header-title class */
+.post-header-title {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* Ensure all elements in the post-header-title are properly aligned */
+.post-header-title * {
+  vertical-align: middle;
+  margin: auto 0;
 }
 
 .post-content h1 { font-size: 16pt; }
@@ -139,7 +218,7 @@ h1,h2,h3 { margin-bottom: 0px;}
     line-height: normal;
     letter-spacing: normal;
     margin-top: 20px;      /* Add space above the title */
-    margin-bottom: 20px;      /* Add space above the title */
+    margin-bottom: 20px;   /*   Add space above the title */
     padding-top: 10px;   
 }
 
@@ -168,4 +247,10 @@ h1,h2,h3 { margin-bottom: 0px;}
 
 .site-footer p {
   text-align: center;
+}
+
+/* Additional fix for specific layout in the screenshot */
+span[style*="display: flex; justify-content: space-between"] {
+  width: 100%;
+  justify-content: space-between !important;
 }

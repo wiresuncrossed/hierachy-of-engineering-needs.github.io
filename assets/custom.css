@@ -37,6 +37,24 @@ h1, h2, h3, h4, h5, h6 {
     flex-wrap: nowrap;
 }
 
+/* Add styles for the search form to appear below navigation */
+.search-container {
+    clear: both;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Style for the search input */
+#lunrsearch {
+    width: 100%;
+    max-width: 250px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #666;
+    
+}
+
 .github-icon {
     vertical-align: middle;
 }
